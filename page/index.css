@@ -1,0 +1,5 @@
+/* VENDOR */
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/inter.css);
+/* УДАЛИТЬ */
+@import url(../style.css);
