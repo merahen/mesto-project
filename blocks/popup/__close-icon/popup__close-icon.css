@@ -1,0 +1,20 @@
+.popup__close-icon {
+  width: 32px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.popup__close-icon:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__close-icon {
+    width: 20px;
+    top:-36px;
+    right: 0;
+  }
+}
