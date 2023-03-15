@@ -7,6 +7,6 @@
 * HTML
 * CSS: flex-box, работа с формами, media-запросы
 
-* [Ссылка на сайт]()
+* [Ссылка на сайт](https://merahen.github.io/mesto-project/)
 
 
