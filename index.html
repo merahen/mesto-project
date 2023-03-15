@@ -14,16 +14,16 @@
   <main class="container">
     <section class="profile">
       <div class="profile__container">
-        <img src="./images/avatar.jpg" alt="Жак-Ив Кусто" class="profile__avatar">
+        <img src="./images/avatar.jpg" alt="Аватар пользователя" class="profile__avatar">
         <div class="profile__info">
           <div class="profile__author">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button type="button" class="profile__edit-button"></button>
+            <button type="button" class="profile__edit-button" aria-label="Редактировать"></button>
           </div>
           <p class="profile__description">Исследователь океана</p>
         </div>
       </div>
-      <button type="button" class="profile__add-button"></button>
+      <button type="button" class="profile__add-button" aria-label="Добавить"></button>
     </section>
 
     <section class="elements">
@@ -31,7 +31,7 @@
         <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
         <div class="element__description">
           <h2 class="element__title">Карачаевск</h2>
-          <button type="button" class="element__like"></button>
+          <button type="button" class="element__like" aria-label="Нравится"></button>
         </div>
       </article>
 
@@ -39,7 +39,7 @@
         <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="element__image">
         <div class="element__description">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <button type="button" class="element__like"></button>
+          <button type="button" class="element__like" aria-label="Нравится"></button>
         </div>
       </article>
 
@@ -47,7 +47,7 @@
         <img src="./images/dombay.jpg" alt="Домбай" class="element__image">
         <div class="element__description">
           <h2 class="element__title">Домбай</h2>
-          <button type="button" class="element__like"></button>
+          <button type="button" class="element__like" aria-label="Нравится"></button>
         </div>
       </article>
 
@@ -55,7 +55,7 @@
         <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="element__image">
         <div class="element__description">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <button type="button" class="element__like"></button>
+          <button type="button" class="element__like" aria-label="Нравится"></button>
         </div>
       </article>
 
@@ -63,7 +63,7 @@
         <img src="./images/dombay.jpg" alt="Домбай" class="element__image">
         <div class="element__description">
           <h2 class="element__title">Домбай</h2>
-          <button type="button" class="element__like"></button>
+          <button type="button" class="element__like" aria-label="Нравится"></button>
         </div>
       </article>
 
@@ -71,29 +71,29 @@
         <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия" class="element__image">
         <div class="element__description">
           <h2 class="element__title">Карачаево-Черкессия</h2>
-          <button type="button" class="element__like"></button>
+          <button type="button" class="element__like" aria-label="Нравится"></button>
         </div>
       </article>
     </section>
-
-    <footer class="footer">
-      <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
-    </footer>
 
     <div class="popup">
       <div class="popup__container">
         <form class="form" name="edit-profile">
           <h2 class="form__title">Редактировать профиль</h2>
           <fieldset class="form__container">
-            <input type="text" value="Жак-Ив Кусто" placeholder="Жак-Ив Кусто" class="form__input" name="profile-name" required>
-            <input type="text" value="Исследователь океана" placeholder="Исследователь океана" class="form__input" name="profile-description" required>
+            <input type="text" value="Жак-Ив Кусто" placeholder="Введите имя" class="form__input" name="profile-name" required>
+            <input type="text" value="Исследователь океана" placeholder="Введите описание" class="form__input" name="profile-description" required>
             <input type="submit" value="Сохранить" class="form__button">
           </fieldset>
         </form>
 
-        <button type="button" class="popup__close-icon"></button>
+        <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
       </div>
     </div>
   </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
+  </footer>
 </body>
 </html>
