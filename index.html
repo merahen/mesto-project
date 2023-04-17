@@ -38,48 +38,47 @@
         </article>
       </template>
     </section>
-
-    <div class="popup popup-profile">
-      <div class="popup__container">
-        <form class="form" name="edit-profile">
-          <h2 class="form__title">Редактировать профиль</h2>
-          <fieldset class="form__container">
-            <input type="text" value="Жак-Ив Кусто" placeholder="Введите имя" class="form__input form__profile-name" name="profile-name" required>
-            <input type="text" value="Исследователь океана" placeholder="Введите описание" class="form__input form__profile-description" name="profile-description" required>
-            <input type="submit" value="Сохранить" class="form__button">
-          </fieldset>
-        </form>
-
-        <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
-      </div>
-    </div>
-
-    <div class="popup popup-element">
-      <div class="popup__container">
-        <form class="form" name="edit-profile">
-          <h2 class="form__title">Новое место</h2>
-          <fieldset class="form__container">
-            <input type="text" placeholder="Название" class="form__input form__name" name="card-name" required>
-            <input type="text" placeholder="Ссылка на картинку" class="form__input form__link" name="card-link" required>
-            <input type="submit" value="Создать" class="form__button">
-          </fieldset>
-        </form>
-
-        <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
-      </div>
-    </div>
-
-    <div class="popup popup-image">
-      <div class="popup__container">
-        <div>
-        <img src="#" alt="" class="popup__image">
-        <p class="popup__caption">Тест</p>
-        <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
-        </div>
-      </div>
-    </div>
-
   </main>
+
+  <div class="popup popup-profile">
+    <div class="popup__container">
+      <form class="form" name="edit-profile">
+        <h2 class="form__title">Редактировать профиль</h2>
+        <fieldset class="form__container">
+          <input type="text" value="Жак-Ив Кусто" placeholder="Введите имя" class="form__input form__profile-name" name="profile-name" required>
+          <input type="text" value="Исследователь океана" placeholder="Введите описание" class="form__input form__profile-description" name="profile-description" required>
+          <input type="submit" value="Сохранить" class="form__button">
+        </fieldset>
+      </form>
+
+      <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
+    </div>
+  </div>
+
+  <div class="popup popup-element">
+    <div class="popup__container">
+      <form class="form" name="add-element">
+        <h2 class="form__title">Новое место</h2>
+        <fieldset class="form__container">
+          <input type="text" placeholder="Название" class="form__input form__name" name="card-name" required>
+          <input type="text" placeholder="Ссылка на картинку" class="form__input form__link" name="card-link" required>
+          <input type="submit" value="Создать" class="form__button">
+        </fieldset>
+      </form>
+
+      <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
+    </div>
+  </div>
+
+  <div class="popup popup-image">
+    <div class="popup__container">
+      <div>
+      <img src="#" alt="" class="popup__image">
+      <p class="popup__caption"></p>
+      <button type="button" class="popup__close-icon" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
