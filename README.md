@@ -6,6 +6,7 @@
 ### Технологии:
 * HTML
 * CSS: flex-box, работа с формами, media-запросы
+* JS: работа с DOM
 
 * [Ссылка на сайт](https://merahen.github.io/mesto-project/)
 
