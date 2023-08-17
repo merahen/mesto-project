@@ -45,8 +45,10 @@
       <form class="form" name="edit-profile">
         <h2 class="form__title">Редактировать профиль</h2>
         <fieldset class="form__container">
-          <input type="text" value="Жак-Ив Кусто" placeholder="Введите имя" class="form__input form__profile-name" name="profile-name" required>
-          <input type="text" value="Исследователь океана" placeholder="Введите описание" class="form__input form__profile-description" name="profile-description" required>
+          <input type="text" value="Жак-Ив Кусто" placeholder="Введите имя" class="form__input form__profile-name" name="profile-name"  id ="profile-name-input" required minlength="2" maxlength="40" pattern="">
+          <span class="form__input-error profile-name-input-error"></span>
+          <input type="text" value="Исследователь океана" placeholder="Введите описание" class="form__input form__profile-description" name="profile-description" id="profile-description-input" required minlength="2" maxlength="200">
+          <span class="form__input-error profile-description-input-error"></span>
           <input type="submit" value="Сохранить" class="form__button">
         </fieldset>
       </form>
@@ -60,8 +62,10 @@
       <form class="form" name="add-element">
         <h2 class="form__title">Новое место</h2>
         <fieldset class="form__container">
-          <input type="text" placeholder="Название" class="form__input form__name" name="card-name" required>
-          <input type="text" placeholder="Ссылка на картинку" class="form__input form__link" name="card-link" required>
+          <input type="text" placeholder="Название" class="form__input form__name" name="card-name" id="card-name-input" required minlength="2" maxlength="30">
+          <span class="form__input-error card-name-input-error"></span>
+          <input type="text" placeholder="Ссылка на картинку" class="form__input form__link" name="card-link" id="card-link-input" required>
+          <span class="form__input-error card-link-input-error"></span>
           <input type="submit" value="Создать" class="form__button">
         </fieldset>
       </form>

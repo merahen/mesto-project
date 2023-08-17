@@ -7,7 +7,8 @@ const profileDescription = document.querySelector('.profile__description');
 const popupProfile = document.querySelector('.popup-profile');
 const popupProfileClose = popupProfile.querySelector('.popup__close-icon');
 
-const formElement = popupProfile.querySelector('.form');
+const formElement = popupProfile.querySelector('.form'); //Форма для валидации
+const formInput = formElement.querySelector('.form__input'); //Инпут для валидации
 const formSubmit = formElement.querySelector('.form__button');
 const inputName = formElement.querySelector('.form__profile-name');
 const inputDescription = formElement.querySelector('.form__profile-description');
@@ -136,3 +137,76 @@ function submitFormCardHandler(evt) {
 
 
 cardForm.addEventListener('submit', submitFormCardHandler);
+
+
+// Валидация
+
+// const formElement = popupProfile.querySelector('.form'); //Форма для валидации
+// const formInput = formElement.querySelector('.form__input'); //Инпут для валидации
+// const formSubmit = formElement.querySelector('.form__button');
+// const inputName = formElement.querySelector('.form__profile-name');
+// const inputDescription = formElement.querySelector('.form__profile-description');
+
+// const formError = formElement.querySelector(`.${formInput.id}-error`)
+
+function showInputError(form, input, errorMessage) {
+  const errorElement = form.querySelector(`.${input.id}-error`);
+  input.classList.add('form__input_type_error');
+  errorElement.textContent = errorMessage;
+  errorElement.classList.add('form__input-error_active');
+};
+
+function hideInputError(form, input) {
+  const errorElement = form.querySelector(`.${input.id}-error`);
+  input.classList.remove('form__input_type_error');
+  errorElement.classList.remove('form__input-error_active');
+  errorElement.textContent = '';
+};
+
+function checkInputValidity(form, input) {
+  if(!input.validity.valid) {
+    showInputError(form, input, input.validationMessage);
+  } else {
+    hideInputError(form, input);
+  }
+};
+
+function hasInvalidInput(inputList) {
+  return inputList.some((input) => {
+    return !input.validity.valid;
+  })
+}
+
+function toggleButtonState(inputList, button) {
+  if (hasInvalidInput(inputList)) {
+    button.classList.add('form__button_inactive');
+  } else {
+    button.classList.remove('form__button_inactive');
+  }
+}
+
+function setEventListeners(form) {
+  const inputList = Array.from(form.querySelectorAll('.form__input'));
+  const buttonElement = form.querySelector('.form__button')
+
+  inputList.forEach((input) => {
+    input.addEventListener('input', () => {
+      toggleButtonState(inputList, buttonElement)
+      checkInputValidity(form, input);
+    });
+  });
+};
+
+function enableValidation() {
+  const formList = Array.from(document.querySelectorAll('.form'));
+  formList.forEach((form) => {
+    form.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+    })
+    setEventListeners(form);
+  })
+}
+
+enableValidation();
+
+
