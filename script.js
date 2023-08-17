@@ -164,6 +164,11 @@ function hideInputError(form, input) {
 };
 
 function checkInputValidity(form, input) {
+  if (input.validity.patternMismatch) {
+    input.setCustomValidity(input.dataset.errorMessage);
+  } else {
+    input.setCustomValidity('')
+  }
   if(!input.validity.valid) {
     showInputError(form, input, input.validationMessage);
   } else {
