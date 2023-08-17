@@ -4,6 +4,7 @@ const profileEdit = document.querySelector('.profile__edit-button');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 
+const popups = document.querySelectorAll('.popup')
 const popupProfile = document.querySelector('.popup-profile');
 const popupProfileClose = popupProfile.querySelector('.popup__close-icon');
 
@@ -214,4 +215,21 @@ function enableValidation() {
 
 enableValidation();
 
+
+
+popups.forEach((popup) => {
+  // const popup = button.closest('.popup');
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('popup_opened')) {
+      closePopup(popup);
+    }
+  });
+
+  document.addEventListener('keydown', (evt) => {
+    if(evt.key === 'Escape' && popup.classList.contains('popup_opened')) {
+      closePopup(popup)
+      console.log('1')
+    }
+  })
+});
 
